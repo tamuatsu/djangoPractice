@@ -1,0 +1,10 @@
+{% extends "./base.html" %}
+
+{% block content %}
+    <h1>Delete Author</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>"{{ object }}" 本当に削除してよろしいですか？</p>
+        <input type="submit" value="確認">
+    </form>
+{% endblock %}
